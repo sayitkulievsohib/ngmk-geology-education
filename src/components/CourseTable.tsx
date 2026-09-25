@@ -20,11 +20,11 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
     <div className="w-full">
       {/* Seryozniy, keng va havosi ko'p o'quv katalogi */}
       <div className="bg-white border border-zinc-200/90 rounded-2xl overflow-hidden shadow-xs">
-        {/* Yuqori panel: 1 qatorda, qora chiziqlarsiz, xotirjam va salobatli */}
-        <div className="bg-zinc-900 text-white px-5 sm:px-7 py-4 flex items-center justify-between">
+        {/* Yuqori panel: Nuqta va matn balandligi qat'iy markazlashtirilgan */}
+        <div className="bg-zinc-900 text-white px-5 sm:px-7 py-3.5 sm:py-4 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
-            <h2 className="font-semibold text-xs sm:text-sm tracking-wider text-zinc-100 uppercase whitespace-nowrap">
+            <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0 translate-y-[1px]" />
+            <h2 className="font-semibold text-xs sm:text-sm tracking-wider text-zinc-100 uppercase whitespace-nowrap leading-none">
               {t.catalogTitle}
             </h2>
           </div>
@@ -35,7 +35,6 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
 
         {/* ======================================================== */}
         {/* TELEFON UCHUN KENG VA ERKIN KO'RINISH (MOBILE VIEW)      */}
-        {/* Zichliksiz, har bir kurs erkin kartochka sifatida turadi */}
         {/* ======================================================== */}
         <div className="md:hidden divide-y divide-zinc-100 p-2 sm:p-3">
           {courses.map((course, index) => {
@@ -89,7 +88,6 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
 
         {/* ======================================================== */}
         {/* DESKTOP TABLE VIEW (Keng ekranlar uchun rasmiy jadval)   */}
-        {/* Qora chiziqlarsiz, yumshoq oraliqlar bilan               */}
         {/* ======================================================== */}
         <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left border-collapse">

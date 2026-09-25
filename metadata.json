@@ -1,6 +1,8 @@
 {
-  "name": "Konchilik O'quv Markazi - Kurslar va Narxlar",
+  "name": "ngmk-geology-education",
   "description": "Tog'-kon sanoati yo'nalishidagi kasbiy o'quv kurslari, texnika operatorligi, marksheyderlik va narxlar jadvali.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
