@@ -17,7 +17,7 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
   };
 
   return (
-    <div className="w-full">
+    <div id="katalog" className="w-full scroll-mt-20">
       {/* Seryozniy, nufuzli konchilik o'quv katalogi */}
       <div className="bg-white border border-zinc-200 rounded-xl overflow-hidden">
         {/* Yuqori panel: Qat'iy va rasmiy */}

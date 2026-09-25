@@ -1,0 +1,4 @@
+Ushbu papkaga litsenziya rasmlarini joylashtiring:
+1-sahifa uchun: 1.jpg yoki 1.png
+2-sahifa uchun: 2.jpg yoki 2.png
+(Fayl nomi 1.png va 2.png yoki 1.jpg va 2.jpg bo'lsa avtomatik ko'rsatiladi)

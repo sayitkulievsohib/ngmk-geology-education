@@ -20,7 +20,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
   };
 
   return (
-    <section className="mt-5 sm:mt-7 mb-12 w-full">
+    <section id="qongiroq" className="mt-6 sm:mt-8 w-full scroll-mt-20">
       {/* Katalog bilan bir xil uslubdagi toza aloqa paneli */}
       <div className="bg-white border border-zinc-200 rounded-xl overflow-hidden">
         {/* Yuqori sarlavha */}

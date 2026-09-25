@@ -19,6 +19,23 @@ export const TRANSLATIONS = {
     footerText: "NGMK GEOLOGY EDUCATION — Kasbiy mutaxassislarni tayyorlash markazi",
     rightsReserved: "Barcha huquqlar himoyalangan",
     
+    // Sidebar va navigatsiya
+    menuTitle: "Bo‘limlar menyusi",
+    navCatalog: "Katalog",
+    navLicense: "Litsenziya",
+    navCall: "Qo‘ng‘iroq",
+    navAddress: "Manzil",
+    
+    // Litsenziya bo'limi
+    licenseTitle: "Davlat litsenziyasi",
+    licenseBadge: "Rasmiy hujjat",
+    licenseSubtitle: "Kasbiy ta’lim va qayta tayyorlash faoliyatini yuritish bo‘yicha davlat litsenziyasi",
+    page1Tab: "1-sahifa (Litsenziya)",
+    page2Tab: "2-sahifa (Ilova)",
+    prevPage: "Oldingi",
+    nextPage: "Keyingi",
+    zoomHint: "Kattalashtirish",
+
     // Modal ma'lumotlari
     modalTitle: "Kurs haqida to‘liq ma’lumot",
     requiredDocsTitle: "Kerakli hujjatlar:",
@@ -29,13 +46,13 @@ export const TRANSLATIONS = {
     noDriverLicenseNeeded: "Ushbu yo‘nalish uchun haydovchilik guvohnomasi talab etilmaydi",
     
     // Manzil va Lokatsiya
-    locationTitle: "Manzil va mo‘ljal",
-    addressLabel: "Manzil:",
+    locationTitle: "O‘quv markazi manzili va mo‘ljal",
+    addressLabel: "Aniq manzil:",
     addressText: "Navoiy shahar, Zaryapetyan ko‘chasi, 18-uy",
     landmarkLabel: "Mo‘ljal:",
     landmarkText: "O‘zbekiston kinoteatri, elektronika do‘koni (2-qavat)",
     mapBtnText: "Google Xarita orqali borish",
-    photoClickHint: "Rasmni kattalashtirish uchun bosing",
+    photoClickHint: "Manzilni kattalashtirish uchun bosing",
     buildingPhotoTitle: "O‘quv markazi binosi",
     closeBtn: "Yopish",
     durationLabel: "O‘qish muddati:",
@@ -59,6 +76,23 @@ export const TRANSLATIONS = {
     footerText: "NGMK GEOLOGY EDUCATION — Центр подготовки профессиональных специалистов",
     rightsReserved: "Все права защищены",
     
+    // Sidebar va navigatsiya
+    menuTitle: "Меню разделов",
+    navCatalog: "Каталог",
+    navLicense: "Лицензия",
+    navCall: "Звонок",
+    navAddress: "Адрес",
+    
+    // Litsenziya bo'limi
+    licenseTitle: "Государственная лицензия",
+    licenseBadge: "Официальный документ",
+    licenseSubtitle: "Государственная лицензия на образовательную деятельность и переподготовку кадров",
+    page1Tab: "1-я страница (Лицензия)",
+    page2Tab: "2-я страница (Приложение)",
+    prevPage: "Назад",
+    nextPage: "Вперед",
+    zoomHint: "Увеличить",
+
     // Modal ma'lumotlari
     modalTitle: "Подробная информация о курсе",
     requiredDocsTitle: "Необходимые документы:",
@@ -69,13 +103,13 @@ export const TRANSLATIONS = {
     noDriverLicenseNeeded: "Для данного направления водительское удостоверение не требуется",
     
     // Manzil va Lokatsiya
-    locationTitle: "Адрес и ориентир",
-    addressLabel: "Адрес:",
+    locationTitle: "Адрес и ориентир учебного центра",
+    addressLabel: "Точный адрес:",
     addressText: "г. Навои, ул. Заряпетяна, дом 18",
     landmarkLabel: "Ориентир:",
     landmarkText: "Кинотеатр «Узбекистан», магазин электроники (2-й этаж)",
     mapBtnText: "Маршрут в Google Maps",
-    photoClickHint: "Нажмите на фото для увеличения",
+    photoClickHint: "Нажмите для увеличения адреса",
     buildingPhotoTitle: "Здание учебного центра",
     closeBtn: "Закрыть",
     durationLabel: "Срок обучения:",

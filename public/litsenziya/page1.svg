@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595 842" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Background sheet -->
+  <rect width="595" height="842" fill="#ffffff" />
+  
+  <!-- Outer decorative border -->
+  <rect x="24" y="24" width="547" height="794" fill="none" stroke="url(#goldBorder)" stroke-width="3" rx="4"/>
+  <rect x="32" y="32" width="531" height="778" fill="none" stroke="#e4e4e7" stroke-width="1"/>
+
+  <!-- Official emblem placeholder -->
+  <circle cx="297" cy="95" r="32" fill="#fafafa" stroke="#d4d4d8" stroke-width="2"/>
+  <circle cx="297" cy="95" r="26" fill="#f43f5e" fill-opacity="0.1"/>
+  <polygon points="297,72 304,88 322,88 308,99 313,116 297,105 281,116 286,99 272,88 290,88" fill="#f59e0b"/>
+
+  <!-- Header text -->
+  <text x="297" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="#71717a" text-anchor="middle" letter-spacing="2">
+    O‘ZBEKISTON RESPUBLIKASI
+  </text>
+  <text x="297" y="168" font-family="sans-serif" font-size="10" fill="#a1a1aa" text-anchor="middle" letter-spacing="1">
+    KASBIY TA’LIM VA MALAKA OSHIRISH FAOLIYATI
+  </text>
+
+  <!-- Big License Title -->
+  <text x="297" y="210" font-family="serif" font-size="28" font-weight="bold" fill="#18181b" text-anchor="middle" letter-spacing="4">
+    LITSENZIYA
+  </text>
+  <text x="297" y="235" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f59e0b" text-anchor="middle" letter-spacing="1.5">
+    1-SAHIFA • ASOSIY HUJJAT
+  </text>
+
+  <!-- Decorative separator -->
+  <line x1="120" y1="255" x2="475" y2="255" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Content lines mockup -->
+  <g fill="#3f3f46" font-family="sans-serif" font-size="11">
+    <text x="70" y="300" font-weight="bold">Tashkilot nomi:</text>
+    <text x="70" y="322" font-size="13" font-weight="bold" fill="#18181b">"NGMK GEOLOGY EDUCATION" MChJ</text>
+
+    <text x="70" y="365" font-weight="bold">Faoliyat turi:</text>
+    <text x="70" y="387" fill="#52525b">Tog‘-kon va geologiya sohasida kasbiy mutaxassislarni tayyorlash</text>
+    <text x="70" y="405" fill="#52525b">va qayta tayyorlash o‘quv markazi</text>
+
+    <text x="70" y="445" font-weight="bold">Yuridik manzil:</text>
+    <text x="70" y="467" fill="#52525b">Navoiy shahar, Zaryapetyan ko‘chasi, 18-uy</text>
+
+    <text x="70" y="505" font-weight="bold">Litsenziya holati:</text>
+    <text x="70" y="527" font-weight="bold" fill="#15803d">AMALDA (MUDDATSIZ)</text>
+  </g>
+
+  <!-- Watermark logo in center -->
+  <circle cx="297" cy="580" r="80" fill="none" stroke="#f4f4f5" stroke-width="6"/>
+  <text x="297" y="588" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e4e4e7" text-anchor="middle" letter-spacing="2">
+    NGMK EDUCATION
+  </text>
+
+  <!-- Stamp and Signature area -->
+  <g transform="translate(100, 680)">
+    <line x1="0" y1="50" x2="160" y2="50" stroke="#71717a" stroke-width="1"/>
+    <text x="80" y="65" font-family="sans-serif" font-size="9" fill="#71717a" text-anchor="middle">Rahbar imzosi</text>
+  </g>
+  <g transform="translate(340, 680)">
+    <circle cx="60" cy="30" r="38" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 2"/>
+    <text x="60" y="34" font-family="sans-serif" font-size="9" font-weight="bold" fill="#2563eb" text-anchor="middle">MUHR / STAMP</text>
+  </g>
+
+  <!-- Bottom QR code box & Number -->
+  <rect x="50" y="750" width="45" height="45" fill="#f4f4f5" stroke="#d4d4d8"/>
+  <text x="110" y="775" font-family="monospace" font-size="10" fill="#71717a">№ KTE-2024-08941</text>
+  <text x="545" y="775" font-family="sans-serif" font-size="9" fill="#a1a1aa" text-anchor="end">1 / 2 - sahifa</text>
+</svg>
