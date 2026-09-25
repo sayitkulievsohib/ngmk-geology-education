@@ -168,13 +168,6 @@ export const EnrollModal: React.FC<EnrollModalProps> = ({ course, lang, onClose 
                   alt={t.buildingPhotoTitle}
                   className="w-full h-44 sm:h-52 object-cover"
                 />
-
-                <div className="absolute inset-0 bg-zinc-950/20 group-hover:bg-zinc-950/35 transition-colors flex items-center justify-center">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900/85 text-white text-xs font-medium backdrop-blur-xs">
-                    <Maximize2 className="w-3.5 h-3.5 text-amber-400" />
-                    <span>{t.photoClickHint}</span>
-                  </span>
-                </div>
               </div>
 
               {/* 5. MANZIL VA MO'LJAL MATNLARI */}
@@ -200,7 +193,7 @@ export const EnrollModal: React.FC<EnrollModalProps> = ({ course, lang, onClose 
                     href="https://maps.app.goo.gl/Q9uTa9zHU382LkEw6"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full h-10 inline-flex items-center justify-center gap-2 px-4 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs sm:text-sm rounded-lg transition-colors cursor-pointer"
+                    className="w-full h-10 inline-flex items-center justify-center gap-2 px-4 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs sm:text-sm rounded-lg transition-colors cursor-pointer shadow-2xs"
                   >
                     <MapPin className="w-4 h-4 text-amber-400" />
                     <span>{t.mapBtnText}</span>

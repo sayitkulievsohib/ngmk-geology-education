@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Language, TRANSLATIONS } from '../data/translations';
-import { MapPin, ExternalLink, Maximize2, X } from 'lucide-react';
+import { MapPin, ExternalLink, X } from 'lucide-react';
 
 interface AddressSectionProps {
   lang: Language;
@@ -22,7 +22,7 @@ export const AddressSection: React.FC<AddressSectionProps> = ({ lang }) => {
   return (
     <section id="manzil" className="mt-6 sm:mt-8 mb-12 w-full scroll-mt-20">
       <div className="bg-white border border-zinc-200 rounded-xl overflow-hidden shadow-2xs">
-        {/* Sarlavha paneli */}
+        {/* Sarlavha paneli: Qat'iy va rasmiy */}
         <div className="bg-zinc-950 text-white px-5 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between border-b border-zinc-800">
           <div className="flex items-center gap-2.5">
             <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
@@ -35,10 +35,10 @@ export const AddressSection: React.FC<AddressSectionProps> = ({ lang }) => {
           </span>
         </div>
 
-        {/* Kontent: Aynan "Batafsil" oynasidagi kabi fontlar, joylashuv va toza dizayn */}
+        {/* Kontent: Aynan "Batafsil" kabi toza dizayn */}
         <div className="p-4 sm:p-6 bg-white">
           <div className="border border-zinc-200 rounded-xl overflow-hidden bg-white shadow-2xs">
-            {/* 1. Manzil fotosurati */}
+            {/* 1. Manzil fotosurati: Ortiqcha qora kattalashtirish buttoni butunlay olib tashlandi */}
             <div
               className="relative cursor-pointer group"
               onClick={() => setIsPhotoZoomed(true)}
@@ -49,16 +49,9 @@ export const AddressSection: React.FC<AddressSectionProps> = ({ lang }) => {
                 alt={t.buildingPhotoTitle}
                 className="w-full h-56 sm:h-72 object-cover"
               />
-
-              <div className="absolute inset-0 bg-zinc-950/20 group-hover:bg-zinc-950/35 transition-colors flex items-center justify-center">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900/85 text-white text-xs font-medium backdrop-blur-xs">
-                  <Maximize2 className="w-3.5 h-3.5 text-amber-400" />
-                  <span>{t.photoClickHint}</span>
-                </span>
-              </div>
             </div>
 
-            {/* 2. Manzil va Mo'ljal matnlari - Aynan Batafsil kabi */}
+            {/* 2. Manzil va Mo'ljal matnlari */}
             <div className="p-4 sm:p-5 bg-white space-y-3">
               <div className="flex items-start gap-2.5 text-xs sm:text-sm">
                 <MapPin className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
@@ -75,13 +68,13 @@ export const AddressSection: React.FC<AddressSectionProps> = ({ lang }) => {
                 </div>
               </div>
 
-              {/* 3. Google Map orqali borish tugmasi */}
+              {/* 3. Google Map orqali borish tugmasi: Qora fon, sariq yozuv */}
               <div className="pt-2">
                 <a
                   href="https://maps.app.goo.gl/Q9uTa9zHU382LkEw6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full h-10 inline-flex items-center justify-center gap-2 px-4 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs sm:text-sm rounded-lg transition-colors cursor-pointer"
+                  className="w-full h-10 inline-flex items-center justify-center gap-2 px-4 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs sm:text-sm rounded-lg transition-colors cursor-pointer shadow-2xs"
                 >
                   <MapPin className="w-4 h-4 text-amber-400" />
                   <span>{t.mapBtnText}</span>

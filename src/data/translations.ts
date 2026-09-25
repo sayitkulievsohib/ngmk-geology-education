@@ -2,7 +2,7 @@ export type Language = 'uz' | 'ru';
 
 export const TRANSLATIONS = {
   uz: {
-    brandSubtitle: "Tog‘-kon va geologiya yo‘nalishidagi kasbiy o‘quv kurslari va to‘lovlar jadvali",
+    brandSubtitle: "Tog‘-kon va geologiya yo‘nalishidagi kasbiy o‘quv kurslari",
     catalogTitle: "O‘quv kurslari katalogi",
     directionCol: "Yo‘nalish",
     durationCol: "O‘qish muddati",
@@ -59,7 +59,7 @@ export const TRANSLATIONS = {
     priceLabel: "Kurs to‘lovi:",
   },
   ru: {
-    brandSubtitle: "Профессиональные учебные курсы горно-геологической отрасли и прейскурант",
+    brandSubtitle: "Профессиональные учебные курсы горно-геологической отрасли",
     catalogTitle: "Каталог учебных курсов",
     directionCol: "Направление",
     durationCol: "Срок обучения",

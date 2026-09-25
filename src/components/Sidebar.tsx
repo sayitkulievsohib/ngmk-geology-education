@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Language, TRANSLATIONS } from '../data/translations';
 import {
-  X,
   BookOpen,
   Award,
   PhoneCall,
@@ -40,8 +39,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, lang }) => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
-
   const handleNavClick = (sectionId: string) => {
     onClose();
     setTimeout(() => {
@@ -49,7 +46,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, lang }) => {
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 150);
+    }, 200);
   };
 
   const navItems = [
@@ -80,16 +77,26 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, lang }) => {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex">
-      {/* Orqa qoraytirilgan fon */}
+    <div
+      className={`fixed inset-0 z-50 flex transition-all duration-300 ease-in-out ${
+        isOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'
+      }`}
+    >
+      {/* Orqa qoraytirilgan fon - Mayin ochilib-yopiluvchi animatsiya bilan */}
       <div
-        className="fixed inset-0 bg-zinc-950/60 backdrop-blur-xs transition-opacity"
+        className={`fixed inset-0 bg-zinc-950/45 backdrop-blur-[2px] transition-opacity duration-300 ease-in-out ${
+          isOpen ? 'opacity-100' : 'opacity-0'
+        }`}
         onClick={onClose}
       />
 
-      {/* Chapdan chiquvchi toza, zamonaviy va nafis korporativ panel */}
-      <div className="relative w-72 max-w-[80vw] bg-white h-full shadow-2xl flex flex-col z-10 animate-in slide-in-from-left duration-200">
-        {/* Yuqori panel */}
+      {/* Chapdan mayin sirg'alib chiquvchi panel (X tugmasisiz) */}
+      <div
+        className={`relative w-72 max-w-[80vw] bg-white h-full shadow-2xl flex flex-col z-10 transition-transform duration-300 ease-out transform ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {/* Yuqori panel: Qat'iy va rasmiy sarlavha */}
         <div className="px-5 py-4 bg-zinc-950 text-white flex items-center justify-between border-b border-zinc-800">
           <div className="flex items-center gap-2.5">
             <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
@@ -97,18 +104,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, lang }) => {
               {t.menuTitle}
             </span>
           </div>
-
-          <button
-            type="button"
-            onClick={onClose}
-            className="w-7 h-7 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
-            aria-label="Yopish"
-          >
-            <X className="w-4 h-4" />
-          </button>
         </div>
 
-        {/* Bo'limlar ro'yxati - Toza, zamonaviy chiziqli menyu (mos kelmaydigan sariq qutilarsiz) */}
+        {/* Bo'limlar ro'yxati */}
         <nav className="p-3 flex-1 overflow-y-auto divide-y divide-zinc-100">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -138,8 +136,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, lang }) => {
             );
           })}
         </nav>
-
-        {/* Pastki qism: Ortiqcha telefon raqami va yozuvlar butunlay olib tashlandi */}
       </div>
     </div>
   );

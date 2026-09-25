@@ -66,7 +66,7 @@ export default function App() {
           <span className="font-semibold text-zinc-800">
             {t.footerText}
           </span>
-          <span>© {new Date().getFullYear()} {t.rightsReserved}</span>
+          <span>© 2021-2026 {t.rightsReserved}</span>
         </div>
       </footer>
     </div>

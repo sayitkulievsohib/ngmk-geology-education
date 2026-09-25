@@ -19,8 +19,8 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
   return (
     <div id="katalog" className="w-full scroll-mt-20">
       {/* Seryozniy, nufuzli konchilik o'quv katalogi */}
-      <div className="bg-white border border-zinc-200 rounded-xl overflow-hidden">
-        {/* Yuqori panel: Qat'iy va rasmiy */}
+      <div className="bg-white border border-zinc-200 rounded-xl overflow-hidden shadow-2xs">
+        {/* Yuqori panel: Qat'iy va rasmiy asl holatga qaytarildi */}
         <div className="bg-zinc-950 text-white px-5 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between border-b border-zinc-800">
           <div className="flex items-center gap-2.5">
             <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
@@ -44,7 +44,7 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
                 key={course.id}
                 className="p-4 hover:bg-zinc-50 transition-colors"
               >
-                {/* 1. Tartib raqami va Kurs Nomi - Yo'nalish yaxshigina bold */}
+                {/* 1. Tartib raqami va Kurs Nomi */}
                 <div className="flex items-start gap-3">
                   <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-zinc-100 text-zinc-700 font-bold text-xs shrink-0 mt-0.5 font-mono">
                     {index + 1}
@@ -62,13 +62,13 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
                   <span>{t.studyDuration}</span>
                 </div>
 
-                {/* 3. Kurs to'lovi va Batafsil tugmasi */}
+                {/* 3. Kurs to'lovi va Batafsil tugmasi (Qora fon, sariq yozuv) */}
                 <div className="mt-3 pt-3 border-t border-zinc-100 flex items-center justify-between gap-3 pl-9">
                   <div>
                     <span className="text-[10px] text-zinc-400 font-medium block leading-none mb-1 uppercase tracking-wider">
                       {t.priceCol}
                     </span>
-                    <span className="text-sm sm:text-base font-medium text-zinc-700 tracking-normal tabular-nums">
+                    <span className="text-sm sm:text-base font-medium text-zinc-800 tracking-normal tabular-nums">
                       {formatPrice(course.price)}
                     </span>
                   </div>
@@ -76,10 +76,10 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
                   <button
                     type="button"
                     onClick={() => onSelectCourse(course)}
-                    className="h-9 px-4 inline-flex items-center justify-center gap-1.5 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs rounded-lg transition-colors cursor-pointer"
+                    className="h-9 px-4 inline-flex items-center justify-center gap-1.5 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs rounded-lg transition-colors cursor-pointer shadow-2xs"
                   >
                     <span>{t.enrollBtn}</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
+                    <ChevronRight className="w-3.5 h-3.5 text-amber-400" />
                   </button>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
                       </span>
                     </td>
 
-                    {/* Course Title - yaxshigina bold */}
+                    {/* Course Title */}
                     <td className="py-3.5 px-6">
                       <span className="text-sm font-extrabold text-zinc-950 tracking-tight">
                         {title}
@@ -131,22 +131,22 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
                       </div>
                     </td>
 
-                    {/* Price - nafis va me'yorida */}
+                    {/* Price */}
                     <td className="py-3.5 px-6 text-right">
-                      <span className="text-sm sm:text-base font-medium text-zinc-700 tracking-normal tabular-nums">
+                      <span className="text-sm sm:text-base font-medium text-zinc-800 tracking-normal tabular-nums">
                         {formatPrice(course.price)}
                       </span>
                     </td>
 
-                    {/* Action - Batafsil tugmasi */}
+                    {/* Action - Batafsil tugmasi (Qora fon, sariq yozuv) */}
                     <td className="py-3.5 px-6 text-center">
                       <button
                         type="button"
                         onClick={() => onSelectCourse(course)}
-                        className="w-full inline-flex items-center justify-center gap-1 py-2 px-3.5 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs rounded-lg transition-colors cursor-pointer"
+                        className="w-full inline-flex items-center justify-center gap-1 py-2 px-3.5 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs rounded-lg transition-colors cursor-pointer shadow-2xs"
                       >
                         <span>{t.enrollBtn}</span>
-                        <ChevronRight className="w-3.5 h-3.5" />
+                        <ChevronRight className="w-3.5 h-3.5 text-amber-400" />
                       </button>
                     </td>
                   </tr>
