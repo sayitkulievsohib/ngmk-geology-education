@@ -8,39 +8,39 @@ export interface CourseItem {
 export const COURSES_LIST: CourseItem[] = [
   {
     id: 1,
-    titleUz: "Tog‘ ishchisi",
-    titleRu: "Горнорабочий",
-    price: 3000000,
+    titleUz: "Belaz og‘ir yuk mashinasi haydovchisi (7555, 7555В, 7513)",
+    titleRu: "Водитель большегрузного автомобиля Белаз (7555, 7555В, 7513)",
+    price: 6000000,
   },
   {
     id: 2,
-    titleUz: "O‘tuvchi (prohodchik)",
-    titleRu: "Проходчик",
-    price: 3000000,
-  },
-  {
-    id: 3,
     titleUz: "Ekskavator mashinisti",
     titleRu: "Машинист экскаватора",
     price: 4500000,
   },
   {
+    id: 3,
+    titleUz: "Tog‘ ishchisi",
+    titleRu: "Горнорабочий",
+    price: 3000000,
+  },
+  {
     id: 4,
+    titleUz: "O‘tuvchi (prohodchik)",
+    titleRu: "Проходчик",
+    price: 3000000,
+  },
+  {
+    id: 5,
     titleUz: "Elektrgazpayvandchi",
     titleRu: "Электрогазосварщик",
     price: 3000000,
   },
   {
-    id: 5,
+    id: 6,
     titleUz: "Burg‘ilash dastgohi mashinisti",
     titleRu: "Машинист буровой установки",
     price: 3000000,
-  },
-  {
-    id: 6,
-    titleUz: "Nasos qurilmalari mashinisti",
-    titleRu: "Машинист насосных установок",
-    price: 2000000,
   },
   {
     id: 7,
@@ -56,27 +56,27 @@ export const COURSES_LIST: CourseItem[] = [
   },
   {
     id: 9,
-    titleUz: "BelAZ og‘ir yuk mashinasi haydovchisi (7555, 7555В, 7513)",
-    titleRu: "Водитель большегрузного автомобиля БелАЗ (7555, 7555В, 7513)",
-    price: 6000000,
-  },
-  {
-    id: 10,
     titleUz: "Elektr jihozlarini ta’mirlash bo‘yicha navbatchi chilangar",
     titleRu: "Электрослесарь дежурный и по ремонту оборудования",
     price: 3000000,
   },
   {
-    id: 11,
+    id: 10,
     titleUz: "Kompressor qurilmasi mashinisti",
     titleRu: "Машинист компрессорной установки",
     price: 3000000,
   },
   {
-    id: 12,
+    id: 11,
     titleUz: "Kimyoviy tahlil laboranti",
     titleRu: "Лаборант химического анализа",
     price: 3000000,
+  },
+  {
+    id: 12,
+    titleUz: "Nasos qurilmalari mashinisti",
+    titleRu: "Машинист насосных установок",
+    price: 2000000,
   },
 ];
 

@@ -18,64 +18,65 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
 
   return (
     <div className="w-full">
-      {/* Seryozniy, keng va havosi ko'p o'quv katalogi */}
-      <div className="bg-white border border-zinc-200/90 rounded-2xl overflow-hidden shadow-xs">
-        {/* Yuqori panel: Nuqta va matn balandligi qat'iy markazlashtirilgan */}
-        <div className="bg-zinc-900 text-white px-5 sm:px-7 py-3.5 sm:py-4 flex items-center justify-between">
+      {/* Seryozniy, nufuzli konchilik o'quv katalogi */}
+      <div className="bg-white border border-zinc-200 rounded-xl overflow-hidden">
+        {/* Yuqori panel: Qat'iy va rasmiy */}
+        <div className="bg-zinc-950 text-white px-5 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between border-b border-zinc-800">
           <div className="flex items-center gap-2.5">
-            <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0 translate-y-[1px]" />
-            <h2 className="font-semibold text-xs sm:text-sm tracking-wider text-zinc-100 uppercase whitespace-nowrap leading-none">
+            <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+            <h2 className="font-bold text-xs sm:text-sm tracking-wider text-zinc-100 uppercase whitespace-nowrap">
               {t.catalogTitle}
             </h2>
           </div>
-          <span className="text-xs text-zinc-400 font-normal hidden sm:inline-block">
-            {lang === 'uz' ? 'Kasbiy ta’lim' : 'Профессиональное образование'}
+          <span className="text-[11px] font-medium text-zinc-400 uppercase tracking-wider hidden sm:inline-block">
+            {lang === 'uz' ? '12 ta yo‘nalish' : '12 направлений'}
           </span>
         </div>
 
         {/* ======================================================== */}
-        {/* TELEFON UCHUN KENG VA ERKIN KO'RINISH (MOBILE VIEW)      */}
+        {/* TELEFON UCHUN QULAY KO'RINISH (MOBILE VIEW)              */}
         {/* ======================================================== */}
-        <div className="md:hidden divide-y divide-zinc-100 p-2 sm:p-3">
+        <div className="md:hidden divide-y divide-zinc-100">
           {courses.map((course, index) => {
             const title = lang === 'uz' ? course.titleUz : course.titleRu;
             return (
               <div
                 key={course.id}
-                className="p-4 sm:p-5 rounded-xl hover:bg-zinc-50/80 transition-colors"
+                className="p-4 hover:bg-zinc-50 transition-colors"
               >
-                {/* 1. Tartib raqami va Kurs Nomi */}
+                {/* 1. Tartib raqami va Kurs Nomi - Yo'nalish yaxshigina bold */}
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-100 text-zinc-700 font-semibold text-xs shrink-0 mt-0.5 font-mono">
+                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-md bg-zinc-100 text-zinc-700 font-bold text-xs shrink-0 mt-0.5 font-mono">
                     {index + 1}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-sm sm:text-base font-semibold text-zinc-900 leading-snug">
+                    <h3 className="text-sm sm:text-base font-extrabold text-zinc-950 leading-snug tracking-tight">
                       {title}
                     </h3>
                   </div>
                 </div>
 
                 {/* 2. O'qish muddati */}
-                <div className="mt-2.5 flex items-center gap-1.5 text-xs text-zinc-500 pl-10 font-normal">
-                  <Clock className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
+                <div className="mt-2 flex items-center gap-1.5 text-xs text-zinc-500 pl-9 font-normal">
+                  <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                   <span>{t.studyDuration}</span>
                 </div>
 
-                {/* 3. Kurs to'lovi va Yozilish tugmasi */}
-                <div className="mt-4 pt-3 border-t border-zinc-100 flex items-center justify-between gap-3 pl-10">
+                {/* 3. Kurs to'lovi va Batafsil tugmasi */}
+                <div className="mt-3 pt-3 border-t border-zinc-100 flex items-center justify-between gap-3 pl-9">
                   <div>
-                    <span className="text-[11px] text-zinc-400 font-medium block leading-none mb-1">
+                    <span className="text-[10px] text-zinc-400 font-medium block leading-none mb-1 uppercase tracking-wider">
                       {t.priceCol}
                     </span>
-                    <span className="text-base font-bold text-zinc-900 font-mono tracking-tight tabular-nums">
+                    <span className="text-sm sm:text-base font-medium text-zinc-700 tracking-normal tabular-nums">
                       {formatPrice(course.price)}
                     </span>
                   </div>
 
                   <button
+                    type="button"
                     onClick={() => onSelectCourse(course)}
-                    className="h-9 px-4 inline-flex items-center justify-center gap-1.5 bg-zinc-900 hover:bg-zinc-800 text-amber-400 font-semibold text-xs rounded-lg transition shadow-xs cursor-pointer active:scale-98"
+                    className="h-9 px-4 inline-flex items-center justify-center gap-1.5 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs rounded-lg transition-colors cursor-pointer"
                   >
                     <span>{t.enrollBtn}</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -87,17 +88,17 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
         </div>
 
         {/* ======================================================== */}
-        {/* DESKTOP TABLE VIEW (Keng ekranlar uchun rasmiy jadval)   */}
+        {/* DESKTOP TABLE VIEW (Rasmiy jadval)                       */}
         {/* ======================================================== */}
         <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-zinc-50/80 text-zinc-600 text-xs font-semibold uppercase tracking-wider border-b border-zinc-150">
-                <th className="py-4 px-5 w-14 text-center font-medium">№</th>
-                <th className="py-4 px-6 font-semibold">{t.directionCol}</th>
-                <th className="py-4 px-6 font-semibold">{t.durationCol}</th>
-                <th className="py-4 px-6 text-right font-semibold">{t.priceCol}</th>
-                <th className="py-4 px-6 text-center w-36 font-semibold">{t.actionCol}</th>
+              <tr className="bg-zinc-50 text-zinc-600 text-xs font-bold uppercase tracking-wider border-b border-zinc-200">
+                <th className="py-3.5 px-4 w-14 text-center font-bold">№</th>
+                <th className="py-3.5 px-6 font-bold">{t.directionCol}</th>
+                <th className="py-3.5 px-6 font-bold">{t.durationCol}</th>
+                <th className="py-3.5 px-6 text-right font-bold">{t.priceCol}</th>
+                <th className="py-3.5 px-6 text-center w-36 font-bold">{t.actionCol}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-zinc-100">
@@ -106,42 +107,43 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
                 return (
                   <tr
                     key={course.id}
-                    className="hover:bg-zinc-50/70 transition-colors group"
+                    className="hover:bg-zinc-50/80 transition-colors"
                   >
                     {/* Index */}
-                    <td className="py-4 px-5 text-center font-normal text-xs text-zinc-400 group-hover:text-zinc-700">
-                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-100/80 text-zinc-600 font-semibold group-hover:bg-zinc-900 group-hover:text-amber-400 transition font-mono">
+                    <td className="py-3.5 px-4 text-center font-normal text-xs text-zinc-400">
+                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-md bg-zinc-100 text-zinc-700 font-bold font-mono">
                         {index + 1}
                       </span>
                     </td>
 
-                    {/* Course Title */}
-                    <td className="py-4 px-6">
-                      <span className="text-sm font-semibold text-zinc-900 group-hover:text-amber-700 transition">
+                    {/* Course Title - yaxshigina bold */}
+                    <td className="py-3.5 px-6">
+                      <span className="text-sm font-extrabold text-zinc-950 tracking-tight">
                         {title}
                       </span>
                     </td>
 
                     {/* Study Duration */}
-                    <td className="py-4 px-6">
+                    <td className="py-3.5 px-6">
                       <div className="flex items-center gap-1.5 text-xs text-zinc-500 font-normal">
-                        <Clock className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
+                        <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                         <span>{t.studyDuration}</span>
                       </div>
                     </td>
 
-                    {/* Price */}
-                    <td className="py-4 px-6 text-right">
-                      <span className="text-base font-bold text-zinc-900 font-mono tabular-nums tracking-tight">
+                    {/* Price - nafis va me'yorida */}
+                    <td className="py-3.5 px-6 text-right">
+                      <span className="text-sm sm:text-base font-medium text-zinc-700 tracking-normal tabular-nums">
                         {formatPrice(course.price)}
                       </span>
                     </td>
 
-                    {/* Action */}
-                    <td className="py-4 px-6 text-center">
+                    {/* Action - Batafsil tugmasi */}
+                    <td className="py-3.5 px-6 text-center">
                       <button
+                        type="button"
                         onClick={() => onSelectCourse(course)}
-                        className="w-full inline-flex items-center justify-center gap-1 py-2 px-3.5 bg-zinc-900 hover:bg-zinc-800 text-amber-400 font-semibold text-xs rounded-lg transition shadow-xs cursor-pointer active:scale-98"
+                        className="w-full inline-flex items-center justify-center gap-1 py-2 px-3.5 bg-zinc-950 hover:bg-zinc-800 text-amber-400 font-semibold text-xs rounded-lg transition-colors cursor-pointer"
                       >
                         <span>{t.enrollBtn}</span>
                         <ChevronRight className="w-3.5 h-3.5" />

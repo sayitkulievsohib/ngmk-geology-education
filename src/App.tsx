@@ -5,7 +5,6 @@ import { HeaderLogo } from './components/HeaderLogo';
 import { CourseTable } from './components/CourseTable';
 import { ContactSection } from './components/ContactSection';
 import { EnrollModal } from './components/EnrollModal';
-import { LanguageToggle } from './components/LanguageToggle';
 
 export default function App() {
   const [lang, setLang] = useState<Language>('uz');
@@ -13,19 +12,15 @@ export default function App() {
 
   const t = TRANSLATIONS[lang];
 
-  const handleToggleLang = () => {
-    setLang((prev) => (prev === 'uz' ? 'ru' : 'uz'));
-  };
-
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 font-sans selection:bg-amber-400 selection:text-zinc-950">
-      {/* Asosiy konteyner (Telefon va desktop uchun moslashtirilgan) */}
-      <main className="max-w-5xl mx-auto px-3.5 sm:px-6 lg:px-8 py-4 sm:py-6">
-        {/* 1. Dumaloq shakldagi logo (Top barlarsiz va kirish qismlarisiz, markazda) */}
-        <HeaderLogo lang={lang} />
+      {/* Asosiy konteyner */}
+      <main className="max-w-4xl mx-auto px-3.5 sm:px-6 py-3 sm:py-6">
+        {/* 1. Dumaloq logo, nom va toza til tanlash tugmasi */}
+        <HeaderLogo lang={lang} onSelectLang={setLang} />
 
-        {/* 2. Oq fonda ketma-ketlikdagi konchilik kurslari jadvali */}
-        <section className="mt-2 sm:mt-4">
+        {/* 2. Rasmiy o'quv kurslari katalogi */}
+        <section className="mt-1 sm:mt-2">
           <CourseTable
             courses={COURSES_LIST}
             lang={lang}
@@ -33,22 +28,19 @@ export default function App() {
           />
         </section>
 
-        {/* 3. Telefon raqamlar va Telegram manzillari */}
+        {/* 3. Murojaat uchun telefonlar paneli */}
         <ContactSection lang={lang} />
       </main>
 
-      {/* Pastki o'ng burchakdagi suzib yuruvchi dumaloq til tanlash tugmasi (UZ / RU) */}
-      <LanguageToggle currentLang={lang} onToggle={handleToggleLang} />
-
-      {/* Kursga yozilish modal darchasi */}
+      {/* Kurs haqida batafsil ma'lumot modal darchasi */}
       <EnrollModal
         course={selectedCourse}
         lang={lang}
         onClose={() => setSelectedCourse(null)}
       />
 
-      {/* Rasmiy minimal footer */}
-      <footer className="border-t border-zinc-200 bg-white py-6 text-center text-xs text-zinc-500">
+      {/* Rasmiy toza footer */}
+      <footer className="border-t border-zinc-200 bg-white py-5 text-center text-xs text-zinc-500">
         <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span className="font-semibold text-zinc-800">
             {t.footerText}

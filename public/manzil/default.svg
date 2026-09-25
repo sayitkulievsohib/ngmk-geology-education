@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#27272a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#skyGrad)"/>
+  
+  <!-- Architectural grid background -->
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Modern Building Silhouette -->
+  <rect x="220" y="110" width="360" height="340" rx="8" fill="#3f3f46" stroke="#52525b" stroke-width="2"/>
+  
+  <!-- Floors & windows -->
+  <g fill="#fbbf24" fill-opacity="0.25">
+    <!-- 3rd Floor -->
+    <rect x="250" y="140" width="50" height="35" rx="4"/>
+    <rect x="320" y="140" width="50" height="35" rx="4"/>
+    <rect x="390" y="140" width="50" height="35" rx="4"/>
+    <rect x="460" y="140" width="50" height="35" rx="4"/>
+
+    <!-- 2nd Floor (Education Center highlighted) -->
+    <rect x="245" y="200" width="310" height="60" rx="6" fill="#fbbf24" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="260" y="210" width="45" height="40" rx="4" fill="#fbbf24" fill-opacity="0.8"/>
+    <rect x="320" y="210" width="45" height="40" rx="4" fill="#fbbf24" fill-opacity="0.8"/>
+    <rect x="380" y="210" width="45" height="40" rx="4" fill="#fbbf24" fill-opacity="0.8"/>
+    <rect x="440" y="210" width="45" height="40" rx="4" fill="#fbbf24" fill-opacity="0.8"/>
+    <rect x="495" y="210" width="45" height="40" rx="4" fill="#fbbf24" fill-opacity="0.8"/>
+
+    <!-- 1st Floor Electronics shop -->
+    <rect x="250" y="290" width="130" height="50" rx="4" fill="#71717a" fill-opacity="0.4"/>
+    <rect x="420" y="290" width="130" height="50" rx="4" fill="#71717a" fill-opacity="0.4"/>
+  </g>
+
+  <!-- Location Pin icon badge -->
+  <circle cx="400" cy="80" r="32" fill="#18181b" stroke="#f59e0b" stroke-width="3"/>
+  <path d="M400 62 C389 62 380 71 380 82 C380 97 400 112 400 112 C400 112 420 97 420 82 C420 71 411 62 400 62 Z" fill="url(#goldGrad)"/>
+  <circle cx="400" cy="78" r="5" fill="#18181b"/>
+
+  <!-- Texts -->
+  <text x="400" y="380" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+    NGMK GEOLOGY EDUCATION
+  </text>
+  <text x="400" y="410" font-family="sans-serif" font-size="14" fill="#fbbf24" text-anchor="middle">
+    Navoiy shahar, Zaryapetyan ko‘chasi, 18-uy (2-qavat)
+  </text>
+</svg>
