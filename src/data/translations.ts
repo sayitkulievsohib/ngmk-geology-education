@@ -25,6 +25,7 @@ export const TRANSLATIONS = {
     navLicense: "Litsenziya",
     navCall: "Qo‘ng‘iroq",
     navAddress: "Manzil",
+    navAddressBadge: "Navoiy sh.",
     
     // Litsenziya bo'limi
     licenseTitle: "Davlat litsenziyasi",
@@ -36,7 +37,7 @@ export const TRANSLATIONS = {
     nextPage: "Keyingi",
     zoomHint: "Kattalashtirish",
 
-    // Modal ma'lumotlari
+    // Kurs haqida batafsil modal ma'lumotlari
     modalTitle: "Kurs haqida to‘liq ma’lumot",
     requiredDocsTitle: "Kerakli hujjatlar:",
     belazDocNote: "BC toifadagi haydovchilik guvohnomasi va 3 yillik haydovchilik malakasi (staji)",
@@ -56,10 +57,10 @@ export const TRANSLATIONS = {
     buildingPhotoTitle: "O‘quv markazi binosi",
     closeBtn: "Yopish",
     durationLabel: "O‘qish muddati:",
-    priceLabel: "Kurs to‘lovi:",
+    priceLabel: "Kurs to‘lovi:"
   },
   ru: {
-    brandSubtitle: "Профессиональные учебные курсы горно-геологической отрасли",
+    brandSubtitle: "Профессиональные горно-геологические учебные курсы",
     catalogTitle: "Каталог учебных курсов",
     directionCol: "Направление",
     durationCol: "Срок обучения",
@@ -82,6 +83,7 @@ export const TRANSLATIONS = {
     navLicense: "Лицензия",
     navCall: "Звонок",
     navAddress: "Адрес",
+    navAddressBadge: "г. Навои",
     
     // Litsenziya bo'limi
     licenseTitle: "Государственная лицензия",
@@ -93,7 +95,7 @@ export const TRANSLATIONS = {
     nextPage: "Вперед",
     zoomHint: "Увеличить",
 
-    // Modal ma'lumotlari
+    // Kurs haqida batafsil modal ma'lumotlari
     modalTitle: "Подробная информация о курсе",
     requiredDocsTitle: "Необходимые документы:",
     belazDocNote: "Водительское удостоверение категории BC и стаж вождения от 3 лет",
@@ -113,6 +115,6 @@ export const TRANSLATIONS = {
     buildingPhotoTitle: "Здание учебного центра",
     closeBtn: "Закрыть",
     durationLabel: "Срок обучения:",
-    priceLabel: "Стоимость курса:",
-  },
+    priceLabel: "Стоимость курса:"
+  }
 };

@@ -83,7 +83,7 @@ export const HeaderLogo: React.FC<HeaderLogoProps> = ({
           NGMK GEOLOGY EDUCATION
         </h1>
 
-        <p className="mt-1 text-xs sm:text-sm text-zinc-500 font-medium leading-relaxed max-w-md mx-auto">
+        <p className="mt-1 text-xs sm:text-sm text-zinc-500 font-medium leading-relaxed max-w-2xl mx-auto whitespace-nowrap">
           {t.brandSubtitle}
         </p>
       </div>

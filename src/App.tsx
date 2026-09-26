@@ -10,7 +10,24 @@ import { AddressSection } from './components/AddressSection';
 import { EnrollModal } from './components/EnrollModal';
 
 export default function App() {
-  const [lang, setLang] = useState<Language>('uz');
+  const [lang, setLang] = useState<Language>(() => {
+    try {
+      const saved = localStorage.getItem('ngmk_lang');
+      return (saved === 'ru' || saved === 'uz') ? saved : 'uz';
+    } catch {
+      return 'uz';
+    }
+  });
+
+  const handleSelectLang = (newLang: Language) => {
+    setLang(newLang);
+    try {
+      localStorage.setItem('ngmk_lang', newLang);
+    } catch {
+      // ignore
+    }
+  };
+
   const [selectedCourse, setSelectedCourse] = useState<CourseItem | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -30,7 +47,7 @@ export default function App() {
         {/* Yuqori qism: Chapda 3 ta chiziqcha menyu, O'ngda til, markazda logotip va nom */}
         <HeaderLogo
           lang={lang}
-          onSelectLang={setLang}
+          onSelectLang={handleSelectLang}
           onOpenSidebar={() => setIsSidebarOpen(true)}
         />
 
@@ -49,7 +66,7 @@ export default function App() {
         {/* 3. QO'NG'IROQ - Murojaat uchun telefon raqamlari */}
         <ContactSection lang={lang} />
 
-        {/* 4. MANZIL - Siz qo'ygan bino rasmi, aniq manzil, mo'ljal va Google Xarita */}
+        {/* 4. MANZIL - Bino rasmi, aniq manzil, mo'ljal va Google Xarita */}
         <AddressSection lang={lang} />
       </main>
 
