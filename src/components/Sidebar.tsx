@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { COURSES_LIST } from '../data/courses';
 import { Language, TRANSLATIONS } from '../data/translations';
 import {
   BookOpen,
@@ -59,7 +60,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       id: 'katalog',
       label: t.navCatalog,
       icon: BookOpen,
-      badge: lang === 'uz' ? '12 ta kurs' : '12 курсов',
+      badge: lang === 'uz' ? `${COURSES_LIST.length} ta kurs` : `${COURSES_LIST.length} курсов`,
       action: () => handleNavClick('katalog')
     },
     {

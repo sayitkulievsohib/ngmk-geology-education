@@ -78,6 +78,36 @@ export const COURSES_LIST: CourseItem[] = [
     titleRu: "Машинист насосных установок",
     price: 2000000,
   },
+  {
+    id: 13,
+    titleUz: "Portlatuvchi (vzrivnik)",
+    titleRu: "Взрывник",
+    price: 5700000,
+  },
+  {
+    id: 14,
+    titleUz: "Portlovchi moddalar omborxona mudiri",
+    titleRu: "Заведующий складом взрывчатых материалов",
+    price: 4200000,
+  },
+  {
+    id: 15,
+    titleUz: "Zav.sklad (VM)",
+    titleRu: "Зав. складом (ВМ)",
+    price: 4400000,
+  },
+  {
+    id: 16,
+    titleUz: "Portlatish ishlariga rahbarlik qilish (Rukovodstvo)",
+    titleRu: "Руководство взрывными работами",
+    price: 5700000,
+  },
+  {
+    id: 17,
+    titleUz: "Portlovchi moddalar tarqatuvchisi (Razdatchik)",
+    titleRu: "Раздатчик взрывчатых материалов",
+    price: 3200000,
+  },
 ];
 
 export interface ContactData {
@@ -100,8 +130,8 @@ export const CONTACT_INFO: ContactData = {
       display: "99-153-77-83",
     },
     {
-      raw: "+998996807778",
-      display: "99-680-77-78",
+      raw: "+998987787783",
+      display: "98-778-77-83",
     },
   ],
   telegrams: [

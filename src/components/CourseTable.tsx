@@ -29,7 +29,7 @@ export const CourseTable: React.FC<CourseTableProps> = ({ courses, lang, onSelec
             </h2>
           </div>
           <span className="text-[11px] font-medium text-zinc-400 uppercase tracking-wider hidden sm:inline-block">
-            {lang === 'uz' ? '12 ta yo‘nalish' : '12 направлений'}
+            {lang === 'uz' ? `${courses.length} ta yo‘nalish` : `${courses.length} направлений`}
           </span>
         </div>
 
