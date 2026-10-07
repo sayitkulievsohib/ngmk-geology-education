@@ -88,7 +88,7 @@ export const COURSES_LIST: CourseItem[] = [
     id: 14,
     titleUz: "Portlovchi moddalar omborxona mudiri",
     titleRu: "Заведующий складом взрывчатых материалов",
-    price: 4200000,
+    price: 4400000,
   },
   {
     id: 15,
